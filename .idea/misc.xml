@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_navigate_next.xml" value="0.2195" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.125" />
         <entry key="app/src/main/res/layout/contact_item.xml" value="0.3703125" />
         <entry key="app/src/main/res/layout/error_layout.xml" value="0.3175925925925926" />

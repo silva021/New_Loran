@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.silva021.newloran.databinding.ContactItemBinding
 import com.silva021.newloran.data.model.Contact
 import com.silva021.newloran.data.model.ContactStatus
+import com.silva021.toolkit.extension.gone
 import com.silva021.toolkit.extension.load
 import com.silva021.toolkit.extension.setValueOrDefault
 
@@ -50,12 +51,19 @@ class ListContactViewHolder(
             textContactPhone.setValueOrDefault(contact.phone, "Número: não informado")
             textContactLink.setValueOrDefault(contact.profileLink, "Página: não informada")
                 .setOnClickListener {
-                    contact.profileLink?.let {
-                        onClickLinkListener(
-                            it
-                        )
-                    }
+                    callListener(contact, onClickLinkListener)
                 }
+            container.setOnClickListener {
+                callListener(contact, onClickLinkListener)
+            }
+        }
+    }
+
+    private fun callListener(contact: Contact, onClickLinkListener: (String) -> Unit) {
+        contact.profileLink?.let {
+            onClickLinkListener(
+                it
+            )
         }
     }
 
