@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.silva021.newloran"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(":toolkit")
+    implementation Androidx.core
+    implementation Androidx.appcompat
+    implementation Androidx.material
+    implementation Androidx.constraintlayout
+    implementation Androidx.legacy
+
+    implementation(Navigation.fragment)
+    implementation(Navigation.ui)
+    implementation(Androidx.swipeRefresh)
+    implementation(Squareup.retrofit)
+    implementation(AirBnb.lottie)
+    implementation(Lifecycle.viewModel)
+    implementation(Koin.android)
+    implementation(Koin.viewModel)
+    implementation(Coroutines.coroutines)
+
+    testImplementation AndroidTest.junit
+    androidTestImplementation AndroidTest.testExt
+    androidTestImplementation AndroidTest.espresso
+
+}

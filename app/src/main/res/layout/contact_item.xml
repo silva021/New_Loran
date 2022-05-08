@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp">
+
+    <ImageView
+        android:id="@+id/contact_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/containerData"
+        tools:src="@drawable/ic_abstract_user" />
+
+    <TextView
+        android:id="@+id/text_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/contact_image"
+        app:layout_constraintStart_toStartOf="@+id/contact_image"
+        app:layout_constraintTop_toBottomOf="@+id/contact_image"
+        tools:text="active" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/containerData"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contact_image"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/contact_image"
+            app:layout_constraintTop_toTopOf="@+id/contact_image"
+            tools:text="Wender Gabriel" />
+
+        <TextView
+            android:id="@+id/text_contact_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/contact_image"
+            app:layout_constraintTop_toBottomOf="@+id/text_contact_phone"
+            tools:text="https://manchester.com" />
+
+        <TextView
+            android:id="@+id/text_contact_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/contact_image"
+            app:layout_constraintTop_toBottomOf="@+id/text_contact_email"
+            tools:text="+213-3317-278-853" />
+
+        <TextView
+            android:id="@+id/text_contact_email"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/contact_image"
+            app:layout_constraintTop_toBottomOf="@+id/text_contact_name"
+            tools:text="krisconti3066@ham.com" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/containerData"
+        app:layout_constraintStart_toStartOf="@+id/containerData"
+        app:layout_constraintTop_toBottomOf="@id/containerData" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

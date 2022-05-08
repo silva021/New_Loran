@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/contactListFragment">
+
+    <fragment
+        android:id="@+id/contactListFragment"
+        android:name="com.silva021.newloran.ui.list.ContactListFragment"
+        android:label="ContactListFragment" />
+
+    <fragment
+        android:id="@+id/contactImageDetails"
+        android:name="com.silva021.newloran.ui.photodetails.PhotoDetailsFragment"
+        android:label="Photo Details">
+    </fragment>
+
+    <fragment
+        android:id="@+id/contactWebView"
+        android:name="com.silva021.newloran.ui.webview.WebViewFragment"
+        android:label="Web view">
+    </fragment>
+</navigation>
